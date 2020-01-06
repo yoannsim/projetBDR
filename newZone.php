@@ -1,6 +1,3 @@
-<?php 
-	include_once('SQLselectToArray.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,18 +14,15 @@
 	
 	<nav class="navbar sticky-top navbar-dark bg-secondary">
 		<a class="navbar-brand" href="#">
-			ajouter des expeditions
+			ajouter des zones
 		</a>
-		<form name="x" action="http://localhost/projetBDR/DBtest.php" method="post">
-		<button type="submit" class="btn btn-primary">consulter la base de donnée</button>
+		<form name="x" action="http://localhost/projetBDR/newExp.php" method="post">
+		<button type="submit" class="btn btn-primary">continuer d' éditer l' expédition</button>
 		</form>
 	</nav>
 	
 	
-	<a class="btn btn-primary" href="http://localhost/projetBDR/newUser.php" role="button">crée user</a>
-	<a class="btn btn-primary" href="http://localhost/projetBDR/newAnim.php" role="button">crée animale</a>
-	<a class="btn btn-primary" href="http://localhost/projetBDR/newPlante.php" role="button">crée plante</a>
-	<a class="btn btn-primary" href="http://localhost/projetBDR/newZone.php" role="button">ajouter zone</a>
+	
 	
 	
 	
