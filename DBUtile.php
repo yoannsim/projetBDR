@@ -1,6 +1,6 @@
 <?php
 define("PDO_HOST", "localhost"); 
-define("PDO_DBBASE", "test");
+define("PDO_DBBASE", "projet");
 define("PDO_USER", "test");
 define("PDO_PW", "");
 

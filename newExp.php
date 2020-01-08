@@ -31,8 +31,33 @@
 	<a class="btn btn-primary" href="newZone.php" role="button">ajouter zone</a>
 	
 	
-	
+   <form name="dynamicForm">
+   <label for="exampleInputEmail1">Animale</label>
+   <input class="btn btn-primary"  type="button" onclick="add(this);" value="+"/>
+   <br /><br />
+   <input class="btn btn-primary" type="submit" value="submit"/>
+   </form> 
 	
 	
 </body>
 </html>
+
+
+ <script type="text/Javascript" >
+   function add(element){
+     var form = window.document.dynamicForm;
+     // We clone the add button
+     var add = element.cloneNode(true);
+     // Create a new HTML tag of type "input"
+     var field = document.createElement("input");
+     // The value filled in the form will be stored in an array
+     field.name = "champs[]";
+     field.type = "text";
+     field.setAttribute("class", "form-control");
+     // We create a new element of type "p" and we insert the field inside.
+     var bloc = document.createElement("p");
+     bloc.appendChild(field);
+     form.insertBefore(add, element);
+     form.insertBefore(bloc, element);
+   }
+</script> 

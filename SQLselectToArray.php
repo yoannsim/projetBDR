@@ -9,6 +9,10 @@ function SQLselectToArray($query){
 	$connection = connexion();
 	if (! ($query == "")){
 		$rowAll = $connection->query( $query )->fetchAll(PDO::FETCH_ASSOC);
+	   if(sizeof($rowAll) == 0){
+		   echo "table vide";
+		   die;
+	   }
 		$keyAll = array_keys($rowAll[0]);
 	
 		echo "<thead class=", "thead-dark"," ><tr>";
@@ -35,6 +39,7 @@ function SQLselectToArray($query){
 			 }  	
 			echo"</tr></tbody>";		
 		}
+		
 	}
 }
 ?>
