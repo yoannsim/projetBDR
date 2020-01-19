@@ -1,5 +1,7 @@
 <?php
+	include_once('..\fonctionSQL/SQLinsert.php');
 
+	include_once('..\fonctionSQL/SQLoption.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,13 +29,42 @@
 	<a class="btn btn-primary" href="newZone.php" role="button">ajouter zone</a>
 
 
-   <form name="dynamicForm">
-	<label for="exampleInputEmail1">Animale</label>
-	<input class="btn btn-primary"  type="button" onclick="add(this);" value="+"/>
-		<br /><br />
-	<input class="btn btn-primary" type="submit" value="submit"/>
-   </form>
+  <form name="dynamicForm" action="newAnim.php" method="post">
 
+		<div class="form-group row">
+  		<label for="example-date-input" class="col-2 col-form-label">Date</label>
+  		<input class="form-control" name="date" type="date" value="2011-08-19" >
+		</div>
+
+		<div class="form-group">
+    	<label for="but">bute de l' expedition</label>
+    	<textarea name="but" class="form-control" rows="2"></textarea>
+    </div>
+
+		<div class="form-group">
+	    <label for="exampleInputEmail1">temperature</label>
+	    <input name="temperature" class="form-control"  aria-describedby="emailHelp" placeholder="temperature">
+	  </div>
+
+		<div class="form-group">
+  		<label for="exampleInputEmail1">zone</label>
+  	  <select name="zone" class="form-control" id="exampleFormControlSelect1">
+  		 <?php SQLoption("SELECT * FROM projet.zone","Numero","Numero"); ?>
+  	 </select>
+  	</div>
+
+		<div class="form-group">
+  		<label for="exampleInputEmail1">météo</label>
+  	  <select name="temp" class="form-control" id="exampleFormControlSelect1">
+  		 <?php SQLoption("SELECT * FROM projet.temp","id","id"); ?>
+  	 </select>
+  	</div>
+
+		<label for="exampleInputEmail1">Animale</label>
+			<input class="btn btn-primary"  type="button" onclick="add(this);" value="+"/>
+				<br /><br />
+			<input class="btn btn-primary" type="submit" value="submit"/>
+   </form>
 
 </body>
 </html>

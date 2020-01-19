@@ -46,7 +46,7 @@ include_once('..\fonctionSQL/SQLoption.php');
 	<div class="form-group">
 		<label for="exampleInputEmail1">type de terrain</label>
 	  <select name="terrain" class="form-control" id="exampleFormControlSelect1">
-		 <?php SQLoption("SELECT * FROM projet.typeterrain","nom"); ?>
+		 <?php SQLoption("SELECT * FROM projet.typeterrain","nom","nom"); ?>
 	 </select>
 	</div>
   <button type="submit" class="btn btn-primary">Submit</button>

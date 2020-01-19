@@ -38,7 +38,7 @@
   </div>
    <label for="exampleInputEmail1">classification</label>
 	 <select name="classification" class="form-control" id="exampleFormControlSelect1">
-		<?php SQLoption("SELECT nom FROM projet.classification","nom"); ?>
+		<?php SQLoption("SELECT nom FROM projet.classification","nom","nom"); ?>
 	</select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>

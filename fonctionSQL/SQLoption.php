@@ -4,7 +4,7 @@ include_once('DBUtile.php');
 
 <?php
 
-function SQLoption($query,$rowNam){
+function SQLoption($query,$rowNam,$rowValue){
 
 	$connection = connexion();
 
@@ -17,7 +17,7 @@ function SQLoption($query,$rowNam){
 		// pour chaque ligne (chaque enregistrement)
 		foreach ( $rowAll as $r )
 		{
-			echo "<option>";
+			echo "<option value= \"".$r[$rowValue]."\">";
       echo  $r[$rowNam];
 			echo"</option>";
 		}
