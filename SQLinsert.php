@@ -7,6 +7,6 @@ include_once('DBUtile.php');
 function SQLinsert($query){
 	
 	$connection = connexion();
-	$connection->->exec( $query );
+	$connection->exec( $query );
 }
 ?>

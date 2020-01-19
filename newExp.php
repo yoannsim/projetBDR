@@ -19,9 +19,7 @@
 		<a class="navbar-brand" href="#">
 			ajouter des expeditions
 		</a>
-		<form name="x" action="DBtest.php" method="post">
-		<button type="submit" class="btn btn-primary">consulter la base de donnée</button>
-		</form>
+		<a class="btn btn-primary" href="index.php" role="button">consulter les statistics</a>
 	</nav>
 	
 	
@@ -32,10 +30,10 @@
 	
 	
    <form name="dynamicForm">
-   <label for="exampleInputEmail1">Animale</label>
-   <input class="btn btn-primary"  type="button" onclick="add(this);" value="+"/>
-   <br /><br />
-   <input class="btn btn-primary" type="submit" value="submit"/>
+	<label for="exampleInputEmail1">Animale</label>
+	<input class="btn btn-primary"  type="button" onclick="add(this);" value="+"/>
+		<br /><br />
+	<input class="btn btn-primary" type="submit" value="submit"/>
    </form> 
 	
 	
@@ -48,6 +46,11 @@
      var form = window.document.dynamicForm;
      // We clone the add button
      var add = element.cloneNode(true);
+	  // Create a new HTML tag of type "label"
+     var label = document.createElement("label");
+	 label.innerHTML  = "Animale";
+		
+	 
      // Create a new HTML tag of type "input"
      var field = document.createElement("input");
      // The value filled in the form will be stored in an array
@@ -56,8 +59,11 @@
      field.setAttribute("class", "form-control");
      // We create a new element of type "p" and we insert the field inside.
      var bloc = document.createElement("p");
+	 bloc.appendChild(label);
      bloc.appendChild(field);
+	 
+	 form.insertBefore(bloc, element);
      form.insertBefore(add, element);
-     form.insertBefore(bloc, element);
+     form.insertBefore(field, add);
    }
 </script> 
