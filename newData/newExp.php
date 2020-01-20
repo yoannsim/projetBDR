@@ -20,13 +20,11 @@
 			ajouter des expeditions
 		</a>
 		<a class="btn btn-primary" href="..\index.php" role="button">consulter les statistics</a>
+		<a class="btn btn-primary" href="newUser.php" role="button">crée user</a>
+		<a class="btn btn-primary" href="newAnim.php" role="button">crée animale</a>
+		<a class="btn btn-primary" href="newPlante.php" role="button">crée plante</a>
+		<a class="btn btn-primary" href="newZone.php" role="button">ajouter zone</a>
 	</nav>
-
-
-	<a class="btn btn-primary" href="newUser.php" role="button">crée user</a>
-	<a class="btn btn-primary" href="newAnim.php" role="button">crée animale</a>
-	<a class="btn btn-primary" href="newPlante.php" role="button">crée plante</a>
-	<a class="btn btn-primary" href="newZone.php" role="button">ajouter zone</a>
 
 
   <form name="dynamicForm" action="newAnim.php" method="post">
@@ -70,29 +68,22 @@
 </html>
 
 
- <script type="text/Javascript" >
-   function add(element){
-     var form = window.document.dynamicForm;
-     // We clone the add button
-     var add = element.cloneNode(true);
-	  // Create a new HTML tag of type "label"
-     var label = document.createElement("label");
-	 label.innerHTML  = "Animale";
+<script type="text/Javascript" >
 
+ function add(element){
+	 var form = window.document.dynamicForm;
+	 // We clone the add button
+	 var add = element.cloneNode(true);
+	 // Create a new HTML tag of type "input"
+	 var field = document.createElement("input");
+	 // The value filled in the form will be stored in an array
+	 field.name = "champs[]";
+	 field.type = "text";
 
-     // Create a new HTML tag of type "input"
-     var field = document.createElement("input");
-     // The value filled in the form will be stored in an array
-     field.name = "champs[]";
-     field.type = "text";
-     field.setAttribute("class", "form-control");
-     // We create a new element of type "p" and we insert the field inside.
-     var bloc = document.createElement("p");
-	 bloc.appendChild(label);
-     bloc.appendChild(field);
-
+	 // We create a new element of type "p" and we insert the field inside.
+	 var bloc = document.createElement("p");
+	 bloc.appendChild(field);
+	 form.insertBefore(add, element);
 	 form.insertBefore(bloc, element);
-     form.insertBefore(add, element);
-     form.insertBefore(field, add);
-   }
+ }
 </script>
