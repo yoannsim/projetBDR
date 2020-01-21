@@ -27,19 +27,23 @@
 	</nav>
 
 
-	<form name = vegetal action="DeleteExp.php" method="post">
-  <div class="form-group">
-    <label for="exampleInputEmail1">numero</label>
-    <input name="num" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter nom latin">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-</div>
+
 
 <div class="container-fluid">
 <table class="table table-striped table-bordered" >
   <?php SQLselectToArray("SELECT * FROM expedition");?>
 </table>
+
+
+<form name = vegetal action="DeleteExp.php" method="post">
+<div class="form-group">
+	<label for="exampleInputEmail1">numero</label>
+	<input name="num" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter nom latin">
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
 
 <?php
 if(!empty($_POST['num']) ){

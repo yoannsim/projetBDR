@@ -23,6 +23,9 @@
 		<form name="x" action="newData/newExp.php" method="post">
 		<button type="submit" class="btn btn-primary">nouvelle expedition</button>
 		</form>
+		<form name="x" action="delData/DeleteExp.php" method="post">
+		<button type="submit" class="btn btn-primary">delete expedition</button>
+		</form>
 	</div>
 	</nav>
 

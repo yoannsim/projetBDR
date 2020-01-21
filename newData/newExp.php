@@ -47,7 +47,7 @@
 		<div class="form-group">
   		<label for="exampleInputEmail1">zone</label>
   	  <select name="zone" class="form-control" id="exampleFormControlSelect1">
-  		 <?php SQLoption("SELECT * FROM projet.zone","Numero","Numero"); ?>
+  		 <?php SQLoption("SELECT * FROM projet.zone","numero","numero"); ?>
   	 </select>
   	</div>
 
