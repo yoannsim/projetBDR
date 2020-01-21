@@ -42,7 +42,7 @@
 
 <?php
 if(!empty($_POST['nom']) && !empty($_POST['prenom'])){
-	SQLinsert("INSERT INTO utilisateur (id,Nom,Prenom) VALUES (50,'".$_POST['nom']."','".$_POST['prenom']."')");
+	SQLinsert("INSERT INTO utilisateur (Nom,Prenom) VALUES ('".$_POST['nom']."','".$_POST['prenom']."')");
 	echo "incertion OK";
 }
 	?>

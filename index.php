@@ -28,9 +28,9 @@
 		</form>
 	</div>
 	</nav>
-	<a class="btn btn-primary" href="..\index.php" role="button">voir les zones</a>
-	<a class="btn btn-primary" href="newUser.php" role="button">statistique par animale</a>
-	<a class="btn btn-primary" href="newAnim.php" role="button">voir les expedition</a>
+	<a class="btn btn-primary" href="stat/zone.php" role="button">voir les zones</a>
+	<a class="btn btn-primary" href="stat/animal.php" role="button">statistique par animale</a>
+	<a class="btn btn-primary" href="stat/exp.php" role="button">voir les expedition</a>
 
 
 
