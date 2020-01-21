@@ -28,18 +28,17 @@
 		</form>
 	</div>
 	</nav>
+	<a class="btn btn-primary" href="..\index.php" role="button">voir les zones</a>
+	<a class="btn btn-primary" href="newUser.php" role="button">statistique par animale</a>
+	<a class="btn btn-primary" href="newAnim.php" role="button">voir les expedition</a>
 
 
-	<form method="POST" action="index.php" >
-	  <input type="text" name="nom" placeholder="nom de la table"  />
-	<input type="submit" class="btn btn-primary " value="Valider" />
-	</form>
 
-	<div class="container-fluid">
-	<table class="table table-striped table-bordered" >
-		<?php if(!empty($_POST['nom'])){SQLselectToArray("SELECT * FROM ".$_POST['nom']);}?>
-	</table>
-	</div>
+
+<table class="table table-striped table-bordered" >
+	<?php SQLselectToArray("SELECT COUNT(DISTINCT animal) AS 'espèce animale',COUNT(DISTINCT vegetal) AS 'espèce vegetal',COUNT(DISTINCT expedition) AS 'nombre d expedition' FROM globlView"); ?>
+</table>
+
 
 
 </body>
